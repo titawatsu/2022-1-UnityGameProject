@@ -47,11 +47,8 @@ namespace Samplebank
         #region FIREGUN
         private void OnFire(InputValue value)
         {
-            if (value.isPressed)
-            {
-                TryFire();
-
-            }
+            if (!value.isPressed) return;
+            TryFire();
         }
 
         private void TryFire()

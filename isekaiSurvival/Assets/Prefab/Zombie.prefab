@@ -150,7 +150,7 @@ MonoBehaviour:
   playerObj: {fileID: 5706223084822453273, guid: f1b0b31a096731e43a2a2421e8546d89, type: 3}
   enemySpeed: 3
   distance: 0
-  distanceBetween: 7
+  distanceBetween: 20
 --- !u!114 &2573164087062825241
 MonoBehaviour:
   m_ObjectHideFlags: 0

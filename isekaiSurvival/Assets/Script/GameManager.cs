@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public PauseController pauseController;
 
     private void Start()
     {
-        Time.timeScale = 1f;
+        pauseController.ResumeGame(); //For making Time.timeScale = 1f;
+
     }
 
     private void Awake()

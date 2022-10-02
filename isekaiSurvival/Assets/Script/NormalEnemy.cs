@@ -20,6 +20,7 @@ public class NormalEnemy : MonoBehaviour
         findDirection();
     }
 
+    #region ENEMY_MOVEMENT
     private void findDirection()
     {
         distance = Vector2.Distance(transform.position, playerObj.transform.position);
@@ -30,12 +31,15 @@ public class NormalEnemy : MonoBehaviour
         if (distance < distanceBetween)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, playerObj.transform.position, enemySpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle );
+            transform.rotation = Quaternion.AngleAxis(angle + 90f, Vector3.forward);
+            //Quaternion.Euler(Vector3.forward * angle); didnt use due to weird rotation
         }
     }
-
+    #endregion
+    #region COLLISION
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
     }
+    #endregion
 }

@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class TimeManager : MonoBehaviour
+{
+    [Header("TextmeshProText")] 
+    public TMP_Text timerText;
+
+    private float initialTime;
+    #region START_UPDATE
+    private void Start() => GetStartTime();
+
+    private void Update() => TimeCalculator();
+    #endregion
+
+    #region CALCULATE_TIME
+    private void GetStartTime()
+    {
+        initialTime = Time.time;
+    }
+
+    private void TimeCalculator()
+    {
+        float t = Time.time - initialTime;
+
+        
+        string minutes = ((int)t / 60).ToString("00");
+        string seconds = (t % 60).ToString("00");
+        string miliseconds = ((int)(t * 100f) % 100).ToString("D2");
+
+        timerText.text = minutes + ":" + seconds + ":" + miliseconds;
+    }
+    #endregion
+}
