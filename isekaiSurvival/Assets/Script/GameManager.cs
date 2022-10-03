@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public PauseController pauseController;
+    public GameObject GameOverUi;
 
     private void Start()
     {
-        pauseController.ResumeGame(); //For making Time.timeScale = 1f;
-
+        SetGameResume();
     }
 
     private void Awake()
@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+    }
+
+    private void SetGameResume()
+    {
+        pauseController.ResumeGame(); //For making Time.timeScale = 1f;
+        GameOverUi.SetActive(false);
     }
 
     public void LoadLevel(int levelIndex)
@@ -47,7 +53,8 @@ public class GameManager : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
-        SceneManager.LoadScene(0);
+
+        GameOver();
     }
 
     private int GetCurrentSceneIndex()
@@ -55,5 +62,12 @@ public class GameManager : MonoBehaviour
         return SceneManager.GetActiveScene().buildIndex;
     }
 
+    private void GameOver()
+    {
+        Time.timeScale = 0f;
+        AudioListener.pause = true;
+        PauseController.paused = true;
+        GameOverUi.SetActive(true);
+    }
 
 }

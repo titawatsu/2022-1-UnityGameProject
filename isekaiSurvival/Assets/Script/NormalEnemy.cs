@@ -10,8 +10,13 @@ public class NormalEnemy : MonoBehaviour
     [SerializeField] private float distance;
     [SerializeField] private float distanceBetween;
 
+    //[SerializeField] private CircleCollider2D circleCollider;
+
+
+
     private void Awake()
     {
+
         playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -37,9 +42,22 @@ public class NormalEnemy : MonoBehaviour
     }
     #endregion
     #region COLLISION
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D circleCollider)
     {
-        
+        if (circleCollider.CompareTag("Player"))
+        {
+            if (circleCollider.gameObject.TryGetComponent<HealthWevent>(out var health))
+            {
+                health.Damage(1);
+                StartCoroutine(DelayHit());
+            }
+        }
     }
     #endregion
+
+    private IEnumerator DelayHit()
+    {
+        yield return new WaitForSeconds(2);
+        
+    }
 }
