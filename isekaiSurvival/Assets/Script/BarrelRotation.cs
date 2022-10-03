@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MainCamera : MonoBehaviour
+public class BarrelRotation : MonoBehaviour
 {
     // Start is called before the first frame update
 

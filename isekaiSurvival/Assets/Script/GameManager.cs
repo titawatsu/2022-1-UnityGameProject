@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PauseController pauseController;
     public GameObject GameOverUi;
 
+    #region START_UPDATE
     private void Start()
     {
         SetGameResume();
@@ -16,16 +17,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
+        if (instance != null && instance != this) Destroy(this);
+        
+        else instance = this;
+        
     }
-
+    #endregion
     private void SetGameResume()
     {
         pauseController.ResumeGame(); //For making Time.timeScale = 1f;
@@ -51,15 +48,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ProcessPlayerDeath()
-    {
-
-        GameOver();
-    }
-
     private int GetCurrentSceneIndex()
     {
         return SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void ProcessPlayerDeath()
+    {
+        GameOver();
     }
 
     private void GameOver()

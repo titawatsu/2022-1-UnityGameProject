@@ -53,6 +53,11 @@ public class NormalEnemy : MonoBehaviour
             }
         }
     }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
     #endregion
 
     private IEnumerator DelayHit()
