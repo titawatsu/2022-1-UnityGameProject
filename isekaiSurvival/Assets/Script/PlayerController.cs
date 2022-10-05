@@ -11,6 +11,7 @@ namespace Samplebank
         [SerializeField] private Transform bulletPrefab;
         [SerializeField] private Transform playerRotate;
         [SerializeField] private GameObject gunfireEffect;
+        [SerializeField] private AudioSource gunfireSound;
 
 
         private float playerSpeed = 5f;
@@ -63,16 +64,16 @@ namespace Samplebank
             StartCoroutine(GunfiringEffect());
         }
 
-        private void HideGunfire()
-        {
-            gunfireEffect.SetActive(false);
-        }
+        private void ShowGunfire() => gunfireEffect.SetActive(true);
+        private void HideGunfire() => gunfireEffect.SetActive(false);
+
 
         public IEnumerator GunfiringEffect()
         {
-            gunfireEffect.SetActive(true);
+            ShowGunfire();
+            gunfireSound.Play();
             yield return new WaitForSeconds(0.1f);
-            gunfireEffect.SetActive(false);
+            HideGunfire();
         }
         #endregion
     }
