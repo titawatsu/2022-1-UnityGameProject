@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    private void Start()
+    {
+        AudioListener.pause = false;
+    }
+
     private void StartButton()
     {
         Time.timeScale = 1f; //to force running game at default timescale, for debug pause game - in-game time scale bug

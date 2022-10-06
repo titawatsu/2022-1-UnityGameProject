@@ -554,7 +554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630.00006, y: -146}
+  m_AnchoredPosition: {x: -538.00006, y: -157.99998}
   m_SizeDelta: {x: 309.23, y: 58.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102380115
@@ -1131,7 +1131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 312}
+  m_AnchoredPosition: {x: -538, y: 300}
   m_SizeDelta: {x: 529.49, y: 180.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276668973
@@ -3853,7 +3853,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: f6d5c5672af528949902afe8d40bdaff, type: 2}
   volumeName: Music
-  testAudio: {fileID: 0}
 --- !u!1 &1033973431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: 4}
+  m_AnchoredPosition: {x: -538, y: -7.999979}
   m_SizeDelta: {x: 309.23, y: 58.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206756449
@@ -4419,7 +4418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630, y: -71.00001}
+  m_AnchoredPosition: {x: -538, y: -82.999985}
   m_SizeDelta: {x: 309.23, y: 58.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244885606
@@ -4565,7 +4564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -630.00006, y: -222.69998}
+  m_AnchoredPosition: {x: -538.00006, y: -234.69997}
   m_SizeDelta: {x: 309.23, y: 58.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249438669
@@ -4969,7 +4968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: f6d5c5672af528949902afe8d40bdaff, type: 2}
   volumeName: Sfx
-  testAudio: {fileID: 0}
 --- !u!1 &1488756628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5732,7 +5730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: f6d5c5672af528949902afe8d40bdaff, type: 2}
   volumeName: Master
-  testAudio: {fileID: 0}
 --- !u!1 &1961958108
 GameObject:
   m_ObjectHideFlags: 0
@@ -5844,7 +5841,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3844225043337898566, guid: f6d5c5672af528949902afe8d40bdaff, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ffd396e288a5d2140861fabe75efbbbe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f75cb603adbfc394ea47015671ee3881, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

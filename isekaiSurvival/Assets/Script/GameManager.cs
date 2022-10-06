@@ -61,9 +61,12 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Time.timeScale = 0f;
-        AudioListener.pause = true;
+        
         PauseController.paused = true;
+
+        // AudioListener.pause = false;
         GameOverUi.SetActive(true);
+        AudioListener.pause = false;
     }
 
 }
