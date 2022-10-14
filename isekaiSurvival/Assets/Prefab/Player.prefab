@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 5706223084822453276}
   - component: {fileID: 5706223084822453277}
   - component: {fileID: 6502490573097654359}
+  - component: {fileID: 4832991816619035851}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -281,7 +282,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2073775859987532717, guid: 845dc7cdc4d6c3e458f2cc1047516c74, type: 3}
   playerRotate: {fileID: 5706223085938204476}
   gunfireEffect: {fileID: 5706223085970999343}
-  gunfireSound: {fileID: 4807256758254791875}
+  playerAudio: {fileID: 4832991816619035851}
 --- !u!114 &6502490573097654359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +301,19 @@ MonoBehaviour:
       m_Calls: []
   Damaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4832991816619035851}
+        m_TargetAssemblyTypeName: PlayerAudioController, Assembly-CSharp
+        m_MethodName: PlayerDamageSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Died:
     m_PersistentCalls:
       m_Calls:
@@ -328,6 +341,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4832991816619035851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706223084822453273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a694d91969cce428178fe0e20a068d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 4807256758254791875}
+  bulletFireSound: {fileID: 11400000, guid: c14c60a1d1bda0747918f98ba21ad2f7, type: 2}
+  playerDamageSound: {fileID: 11400000, guid: cb74e30faef5ed14895e4fad910ec269, type: 2}
 --- !u!1 &5706223085938204475
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +483,7 @@ GameObject:
   - component: {fileID: 6727411204011462171}
   - component: {fileID: 4807256758254791875}
   m_Layer: 6
-  m_Name: GunAudioSource
+  m_Name: PlayerAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,9 +514,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4897647611919320844, guid: f6d5c5672af528949902afe8d40bdaff, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 821534d4c4b530845a57e322eece81a8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

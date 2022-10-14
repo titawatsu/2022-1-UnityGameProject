@@ -25,13 +25,5 @@ public class PlayerBulletObject : MonoBehaviour
         }
         Destroy(gameObject);
 
-        /* EXAMPLE
-        if (collision.TryGetComponent(out Destroyable destroyable))
-        {
-            destroyable.objectHealth -= 1;
-        }
-
-        Destroy(gameObject);
-        */
     }
 }
