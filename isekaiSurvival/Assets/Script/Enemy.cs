@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NormalEnemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject playerObj;
+    [SerializeField] private GameObject lootPrefab;
 
     [SerializeField] private float enemySpeed;
     [SerializeField] private float distance;
@@ -58,11 +59,20 @@ public class NormalEnemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    #endregion
 
     private IEnumerator DelayHit()
     {
         yield return new WaitForSeconds(2);
-        
+
+    }
+
+    #endregion
+
+
+
+    public void LootDrop()
+    {
+        var RandChance = Random.Range(0, 10);
+        if (RandChance == 5) Instantiate(lootPrefab, transform.position, Quaternion.identity);
     }
 }

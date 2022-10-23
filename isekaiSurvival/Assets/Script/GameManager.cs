@@ -64,9 +64,9 @@ public class GameManager : MonoBehaviour
         
         PauseController.paused = true;
 
-        // AudioListener.pause = false;
+        AudioListener.pause = true;
         GameOverUi.SetActive(true);
-        AudioListener.pause = false;
+        //AudioListener.pause = false;
     }
 
 }

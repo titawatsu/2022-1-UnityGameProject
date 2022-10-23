@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObj: {fileID: 5706223084822453273, guid: f1b0b31a096731e43a2a2421e8546d89, type: 3}
+  lootPrefab: {fileID: 9144700840763694032, guid: fb8bd909cd3b6254da6e2a779f842aa5, type: 3}
   enemySpeed: 3
   distance: 0
   distanceBetween: 1000
@@ -190,6 +191,18 @@ MonoBehaviour:
   Died:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 839975360381018519}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: LootDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 839975360381018519}
         m_TargetAssemblyTypeName: NormalEnemy, Assembly-CSharp
         m_MethodName: DestroyEnemy

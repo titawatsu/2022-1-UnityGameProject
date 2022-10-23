@@ -8,17 +8,19 @@ namespace Samplebank
     public class PlayerController : MonoBehaviour
     {
 
+        public float playerSpeed = 3f;
+
+        #region
         [SerializeField] private Transform bulletPrefab;
         [SerializeField] private Transform playerRotate;
         [SerializeField] private GameObject gunfireEffect;
         [SerializeField] private PlayerAudioController playerAudio;
 
-
-        private float playerSpeed = 5f;
-
         private Vector2 moveInput;
 
         private Rigidbody2D rb;
+        internal object health;
+        #endregion
 
         private void Start()
         {
@@ -82,5 +84,20 @@ namespace Samplebank
         public void PlayerDamagedAudio() => playerAudio.PlayerDamageSound();
 
         #endregion
+
+        public void EnableBoostSpeed() => StartCoroutine(ShiftSpeed());
+
+
+        private IEnumerator ShiftSpeed()
+        {
+            playerSpeed = 10f;
+            yield return new WaitForSeconds(5);
+            playerSpeed = 3f;
+
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            
+        }
     }
 }

@@ -58,7 +58,8 @@ GameObject:
   - component: {fileID: 5264167776773602655}
   - component: {fileID: 5264167776773602653}
   - component: {fileID: 5264167776773602594}
-  m_Layer: 0
+  - component: {fileID: 2086518607016206309}
+  m_Layer: 9
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseController: {fileID: 5264167776112710912}
+  GameOverUi: {fileID: 0}
 --- !u!114 &5264167776773602653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +131,20 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 46536620, guid: 7b3236a4d9ea159459b6683afa4500f9, type: 3}
   emptyHeart: {fileID: -1890912678, guid: 7b3236a4d9ea159459b6683afa4500f9, type: 3}
+--- !u!114 &2086518607016206309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264167776773602654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 546bfa1d45e293546a904ba8ac1df95d, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
