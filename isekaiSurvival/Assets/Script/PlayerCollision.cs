@@ -32,4 +32,6 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log(itemType);
         }
     }
+
+    
 }

@@ -10,16 +10,19 @@ namespace Samplebank
 
         public float playerSpeed = 3f;
 
-        #region
+        #region PRIVATE_VARIABLE
         [SerializeField] private Transform bulletPrefab;
         [SerializeField] private Transform playerRotate;
+
         [SerializeField] private GameObject gunfireEffect;
+
         [SerializeField] private PlayerAudioController playerAudio;
+        [SerializeField] private AfterImage afterImage;
 
         private Vector2 moveInput;
 
         private Rigidbody2D rb;
-        internal object health;
+        
         #endregion
 
         private void Start()
@@ -85,19 +88,29 @@ namespace Samplebank
 
         #endregion
 
+        #region PowerUp
         public void EnableBoostSpeed() => StartCoroutine(ShiftSpeed());
 
 
         private IEnumerator ShiftSpeed()
         {
-            playerSpeed = 10f;
-            yield return new WaitForSeconds(5);
-            playerSpeed = 3f;
 
+            IncreaseSpeed();
+            yield return new WaitForSeconds(5);
+            StablizeSpeed();
         }
-        private void OnCollisionEnter2D(Collision2D collision)
+
+        private void IncreaseSpeed()
         {
-            
+            playerSpeed = 10f;
+            afterImage.enableImage = true;
         }
+
+        private void StablizeSpeed()
+        {
+            playerSpeed = 3f;
+            afterImage.enableImage = false;
+        }
+        #endregion
     }
 }
