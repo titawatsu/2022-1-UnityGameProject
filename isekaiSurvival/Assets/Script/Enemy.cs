@@ -58,12 +58,14 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(bloodSplash, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        
     }
 
     private IEnumerator DelayHit()
     {
         yield return new WaitForSeconds(2);
     }
+
 
     #endregion
 
@@ -72,6 +74,6 @@ public class Enemy : MonoBehaviour
     public void LootDrop()
     {
         var RandChance = Random.Range(0, 10);
-        if (RandChance == 5) Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        if (RandChance == 5) Instantiate(lootPrefab, transform.position, transform.rotation);
     }
 }

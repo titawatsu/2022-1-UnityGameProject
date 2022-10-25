@@ -8,10 +8,12 @@ public class TimeManager : MonoBehaviour
     [Header("TextmeshProText")] 
     public TMP_Text timerText;
 
+    public float timer;
     private float initialTime;
-    private float timer;
+
 
     public bool gameOver;
+
     private bool keeptimer = true;
 
     #region START_UPDATE

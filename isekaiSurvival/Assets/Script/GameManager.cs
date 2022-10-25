@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
     public PauseController pauseController;
     public GameObject GameOverUi;
 
+    public TimeManager timeManager;
+
     #region START_UPDATE
     private void Start()
     {
+        
         SetGameResume();
     }
 
@@ -60,13 +63,17 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+
         Time.timeScale = 0f;
+
         
         PauseController.paused = true;
 
         AudioListener.pause = true;
+
+        Destroy(this.gameObject);
+        
         GameOverUi.SetActive(true);
-        //AudioListener.pause = false;
     }
 
 }

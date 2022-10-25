@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4422009515166540709, guid: ee35c0b7a186d9b4682e532b3b4da0fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3461ab73de71254a8656e787274a3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodSplash: {fileID: 3846453743265509642, guid: 8e4e6c9fb0374614eb2fb4a0b606f6e2, type: 3}
   playerObj: {fileID: 5706223084822453273, guid: f1b0b31a096731e43a2a2421e8546d89, type: 3}
   lootPrefab: {fileID: 9144700840763694032, guid: fb8bd909cd3b6254da6e2a779f842aa5, type: 3}
+  bloodSplash: {fileID: 3846453743265509642, guid: 8e4e6c9fb0374614eb2fb4a0b606f6e2, type: 3}
   enemySpeed: 3
   distance: 0
   distanceBetween: 1000

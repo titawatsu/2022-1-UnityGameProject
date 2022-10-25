@@ -6,7 +6,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     //[SerializeField] private PlayerAudioController audioController;
 
-    //[SerializeField] private ParticleSystem dustDeath;
+    //[SerializeField] private ParticleSystem soManyWork;
 
     private Collider2D playerCollider;
     private void Start()

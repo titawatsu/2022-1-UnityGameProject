@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseController: {fileID: 5264167776112710912}
-  GameOverUi: {fileID: 0}
+  GameOverUi: {fileID: 100000, guid: a6e39ced0ea046bcb636c3f0b2e2a745, type: 3}
+  timeManager: {fileID: 5264167776773602653}
 --- !u!114 &5264167776773602653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
+  timer: 0
   gameOver: 0
 --- !u!114 &5264167776773602594
 MonoBehaviour:
