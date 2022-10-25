@@ -6,14 +6,13 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject playerObj;
     [SerializeField] private GameObject lootPrefab;
+    [SerializeField] private GameObject bloodSplash;
 
     [SerializeField] private float enemySpeed;
     [SerializeField] private float distance;
     [SerializeField] private float distanceBetween;
 
     //[SerializeField] private CircleCollider2D circleCollider;
-
-
 
     private void Awake()
     {
@@ -57,13 +56,13 @@ public class Enemy : MonoBehaviour
 
     public void DestroyEnemy()
     {
+        Instantiate(bloodSplash, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
     private IEnumerator DelayHit()
     {
         yield return new WaitForSeconds(2);
-
     }
 
     #endregion

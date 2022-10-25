@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3461ab73de71254a8656e787274a3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodSplash: {fileID: 3846453743265509642, guid: 8e4e6c9fb0374614eb2fb4a0b606f6e2, type: 3}
   playerObj: {fileID: 5706223084822453273, guid: f1b0b31a096731e43a2a2421e8546d89, type: 3}
   lootPrefab: {fileID: 9144700840763694032, guid: fb8bd909cd3b6254da6e2a779f842aa5, type: 3}
   enemySpeed: 3
