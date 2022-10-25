@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 176914564}
   - component: {fileID: 176914563}
   - component: {fileID: 176914562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8fe17e0a1e1f046b29c430bc55c4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 10
+  spawnRadius: 40
   zombiePrefab: {fileID: 2326623854607395151, guid: 80732c84dd220594d9502fd38e75737a, type: 3}
   bosszombiePrefab: {fileID: 2326623854607395151, guid: 6183f7ac168e54248aa9d5378e5d2a0b, type: 3}
   zombieInterval: 2
@@ -1803,7 +1803,7 @@ GameObject:
   - component: {fileID: 578428967}
   - component: {fileID: 578428966}
   - component: {fileID: 578428965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21787,7 +21787,7 @@ GameObject:
   - component: {fileID: 1181870759}
   - component: {fileID: 1181870758}
   - component: {fileID: 1181870757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colider4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22832,7 +22832,7 @@ GameObject:
   - component: {fileID: 1647622745}
   - component: {fileID: 1647622744}
   - component: {fileID: 1647622743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
