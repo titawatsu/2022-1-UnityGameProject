@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4334621015492714793, guid: ee35c0b7a186d9b4682e532b3b4da0fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -149,7 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4413432428471258268}
   bulletSpeed: 10
-  effect: {fileID: 0}
 --- !u!96 &2468559060646408663
 TrailRenderer:
   serializedVersion: 2
