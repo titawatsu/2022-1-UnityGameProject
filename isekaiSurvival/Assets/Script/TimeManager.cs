@@ -12,8 +12,6 @@ public class TimeManager : MonoBehaviour
     private float initialTime;
 
 
-    public bool gameOver;
-
     private bool keeptimer = true;
 
     #region START_UPDATE
@@ -21,8 +19,6 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        //if (gameOver) Stoptimer();
-        
         if (keeptimer) UpdateTimer();
     }
     #endregion

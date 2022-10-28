@@ -7,6 +7,7 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUi;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private AudioSource bgSound;
 
     public static bool paused = false;
 
@@ -40,7 +41,8 @@ public class PauseController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f;
-        AudioListener.pause = true;
+        bgSound.Stop();
+        //AudioListener.pause = true;
         paused = true;
         pauseUi.SetActive(true);
         
@@ -49,7 +51,8 @@ public class PauseController : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f;
-        AudioListener.pause = false;
+        bgSound.Play();
+        //AudioListener.pause = false;
         paused = false;
         pauseUi.SetActive(false);
     }
