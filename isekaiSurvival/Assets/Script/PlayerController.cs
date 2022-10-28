@@ -19,6 +19,8 @@ namespace Samplebank
         [SerializeField] private PlayerAudioController playerAudio;
         [SerializeField] private AfterImage afterImage;
 
+        [SerializeField] private Animator animator;
+
         private Vector2 moveInput;
 
         private Rigidbody2D rb;
@@ -42,6 +44,9 @@ namespace Samplebank
 
         {
             moveInput = value.Get<Vector2>();
+
+            animator.SetFloat("Move", moveInput.x);
+            animator.SetFloat("Move", moveInput.sqrMagnitude);
         }
 
         private void Move()

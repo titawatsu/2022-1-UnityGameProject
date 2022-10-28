@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerDamagedSound
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 40de5110f8dc55746bce945926c5effb, type: 3}
+  - {fileID: 8300000, guid: a65c7be7d65753341b8401cc7dcb3811, type: 3}

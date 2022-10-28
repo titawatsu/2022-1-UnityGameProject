@@ -52,8 +52,8 @@ public class TimeManager : MonoBehaviour
     {
         
         string minutes = ((int)t / 60).ToString("00");
-        string seconds = (t % 60).ToString("f2");
-        string miliseconds = ((int)(t * 100f) % 100).ToString("D2");
+        string seconds = (t % 60).ToString("00");
+        string miliseconds = ((int)(t * 100f) % 100).ToString("00");
 
         return minutes + ":" + seconds + ":" + miliseconds;
     }
