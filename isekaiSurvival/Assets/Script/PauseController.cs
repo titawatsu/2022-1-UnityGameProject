@@ -41,20 +41,21 @@ public class PauseController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f;
-        bgSound.Stop();
-        //AudioListener.pause = true;
+        bgSound.Pause();
         paused = true;
         pauseUi.SetActive(true);
-        
+
+        //AudioListener.pause = true; for pause all sound which make button sound mute
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f;
-        bgSound.Play();
-        //AudioListener.pause = false;
+        bgSound.UnPause();
         paused = false;
         pauseUi.SetActive(false);
+
+        //AudioListener.pause = false;
     }
 
     public void GotoMainmenuButton() => gameManager.LoadLevel(0); // load main menu level 
