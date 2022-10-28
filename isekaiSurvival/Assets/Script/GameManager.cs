@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public PauseController pauseController;
     public GameObject GameOverUi;
-
     public TimeManager timeManager;
 
     #region START_UPDATE
@@ -65,15 +64,14 @@ public class GameManager : MonoBehaviour
     {
 
         Time.timeScale = 0f;
+        PauseController.paused = true; // if use pauseController.paused = true;, it cannot be accessed with an instance reference; qualify it with a type name instead (PauseController)
 
-        
-        PauseController.paused = true;
-
-        AudioListener.pause = true;
+        pauseController.bgSound.Pause();
 
         Destroy(this.gameObject);
-        
         GameOverUi.SetActive(true);
+
+        //AudioListener.pause = true;
     }
 
 }

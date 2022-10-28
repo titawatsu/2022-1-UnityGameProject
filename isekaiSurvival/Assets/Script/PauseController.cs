@@ -7,7 +7,7 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseUi;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private AudioSource bgSound;
+    public AudioSource bgSound;
 
     public static bool paused = false;
 
