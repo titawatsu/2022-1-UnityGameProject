@@ -17,7 +17,7 @@ public class PlayerBulletObject : MonoBehaviour
         Destroy(gameObject, selfdestroyDelay);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // funtion to make damage to the other gameobject that have healthWevent class attached in component.
     {
         if (collision.gameObject.TryGetComponent<HealthWevent>(out var health))
         {

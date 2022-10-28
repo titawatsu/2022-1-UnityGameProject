@@ -11,7 +11,7 @@ public class HealthWevent : MonoBehaviour
     #region PUBLIC_VARIABLE
     public int MaxHp => maxHp; //get maxhp value from inspector
 
-    public int Hp
+    public int Hp // set conditions to hp
     {
         get => hp;
         private set
@@ -45,6 +45,8 @@ public class HealthWevent : MonoBehaviour
     {
         hp = maxHp; //max hp become object's hp when invoke this class 
     }
+
+    // funtions about hp changing
 
     public void Damage(int amount) => Hp -= amount;
 

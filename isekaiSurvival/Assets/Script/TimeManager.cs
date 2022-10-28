@@ -21,12 +21,13 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        if (gameOver) Stoptimer();
+        //if (gameOver) Stoptimer();
         
         if (keeptimer) UpdateTimer();
     }
     #endregion
 
+    // functions to setup timer
     #region CALCULATE_TIME
     private void GetStartTime()
     {
@@ -47,7 +48,7 @@ public class TimeManager : MonoBehaviour
         return timer; // return time
     }
 
-    public string TimeToString(float t)
+    public string TimeToString(float t) // update timer's text in-game
     {
         
         string minutes = ((int)t / 60).ToString("00");

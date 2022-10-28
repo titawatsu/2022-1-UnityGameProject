@@ -17,6 +17,7 @@ public class ItemClass : MonoBehaviour
         
     }
 
+    // funtions about item setting and changes
     public ItemType GetItemInfoOnContact()
     {
         gameObject.SetActive(false);

@@ -11,7 +11,7 @@ public class AudioSlider : MonoBehaviour
 
     public AudioSource testAudio;
     // for changing the volume by slider
-    public void UpdateValueOnChange(float value)
+    public void UpdateValueOnChange(float value) // function to play test audio after update volume value
     {
         mixer.SetFloat(volumeName, value);
         testAudio.Play();

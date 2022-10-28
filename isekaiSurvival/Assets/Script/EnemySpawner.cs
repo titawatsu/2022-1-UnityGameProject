@@ -6,20 +6,20 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private float spawnRadius;
 
-    [SerializeField] private GameObject zombiePrefab;
-    [SerializeField] private GameObject bosszombiePrefab;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject bossPrefab;
 
     [Header("SpawnTime")]
-    [SerializeField] private float zombieInterval;
-    [SerializeField] private float bosszombieInterval;
+    [SerializeField] private float enemyInterval;
+    [SerializeField] private float bossInterval;
 
     
-    private float zombieDelay;
-    private float bosszombieDelay;
+    private float enemyDelay;
+    private float bossDelay;
     private void Start()
     {
-        zombieDelay = zombieInterval;
-        bosszombieDelay = bosszombieInterval;
+        enemyDelay = enemyInterval;
+        bossDelay = bossInterval;
 
         Spawner();
         
@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawner()
     {
-        StartCoroutine(spawnEnemy(zombieDelay, zombiePrefab));
-        StartCoroutine(spawnEnemy(bosszombieDelay, bosszombiePrefab));
+        StartCoroutine(spawnEnemy(enemyDelay, enemyPrefab));
+        StartCoroutine(spawnEnemy(bossDelay, bossPrefab));
     }
 }

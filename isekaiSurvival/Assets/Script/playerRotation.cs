@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BarrelRotation : MonoBehaviour
+public class playerRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     private Camera mainCam;
     private void Start()
     {
-        mainCam = Camera.main;
+        mainCam = Camera.main; // find main camera in scene
     }
 
-    // Update is called once per frame
     private void Update()
     {
         TryRotate();
@@ -25,7 +23,7 @@ public class BarrelRotation : MonoBehaviour
         GunRotation();
     }
 
-    private void GunRotation()
+    private void GunRotation() // function to rotate player by change mouse cursor position
     {
         var direction = (Vector3)Mouse.current.position.ReadValue() - mainCam.WorldToScreenPoint(transform.position);
 

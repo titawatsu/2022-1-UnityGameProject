@@ -28,14 +28,15 @@ public class PauseController : MonoBehaviour
         pauseAction.PauseGame.Escape.performed += _ => DeterminePause(); // for check pause/ resume statement.
         ResumeGame();
     }
-
-    private void DeterminePause()
+    
+    private void DeterminePause() // funtions about game states
     {
         if (paused)
             ResumeGame();
         else
             PauseGame();
     }
+
     public void PauseGame()
     {
         Time.timeScale = 0f;
@@ -44,6 +45,7 @@ public class PauseController : MonoBehaviour
         pauseUi.SetActive(true);
         
     }
+
     public void ResumeGame()
     {
         Time.timeScale = 1f;
@@ -52,6 +54,6 @@ public class PauseController : MonoBehaviour
         pauseUi.SetActive(false);
     }
 
-    public void GotoMainmenuButton() => gameManager.LoadLevel(0); // load man menu level 
+    public void GotoMainmenuButton() => gameManager.LoadLevel(0); // load main menu level 
 
 }

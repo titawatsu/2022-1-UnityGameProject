@@ -19,15 +19,17 @@ public class AfterImage : MonoBehaviour
         
     }
 
-    private void ImageCondition()
+    private void ImageCondition() // create after image by using instantiate() and scale it as player's sprite
     {
         if (imageDelaySeconds > 0) imageDelaySeconds -= Time.deltaTime;
         else
         {
             GameObject currentImage = Instantiate(imageContainer, transform.position, transform.rotation);
+
             Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
             currentImage.transform.localScale = this.transform.localScale;
             currentImage.GetComponent<SpriteRenderer>().sprite = currentSprite;
+
             imageDelaySeconds = imageDelay;
             Destroy(currentImage, 1f);
         }
