@@ -5,14 +5,10 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
 
-    //[SerializeField] private PlayerAudioController audioController;
-
-    //[SerializeField] private ParticleSystem soManyWork;
-
     private Collider2D playerCollider;
     private void Start()
     {
-        playerCollider = GetComponent<Collider2D>();
+        playerCollider = GetComponent<Collider2D>(); // get player colider from its prefab
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +21,7 @@ public class PlayerCollision : MonoBehaviour
 
             force.Normalize();
             GetComponent<Rigidbody2D>().AddForce(force * magnitude);
+            // to create force that push player beck from enemy
         }
 
         if (collision.TryGetComponent(out ItemClass itemClass))
@@ -39,6 +36,7 @@ public class PlayerCollision : MonoBehaviour
                 default:
                     break;
             }
+            //to check item type that player collected 
 
             Debug.Log(itemType);
         }

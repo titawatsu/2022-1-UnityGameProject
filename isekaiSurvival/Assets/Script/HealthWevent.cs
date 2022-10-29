@@ -7,7 +7,7 @@ public class HealthWevent : MonoBehaviour
 {
     [SerializeField] private int maxHp;
 
-    private int hp;
+    [SerializeField] private int hp;
     #region PUBLIC_VARIABLE
     public int MaxHp => maxHp; //get maxhp value from inspector
 
@@ -43,10 +43,10 @@ public class HealthWevent : MonoBehaviour
     #region HP_FUNCTION
     private void Awake()
     {
-        hp = maxHp; //max hp become object's hp when invoke this class 
+        hp = maxHp; //max hp become object's hp when called this class 
     }
 
-    // funtions about hp changing
+    // functions about hp changing
 
     public void Damage(int amount) => Hp -= amount;
 

@@ -12,11 +12,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float distance;
     [SerializeField] private float distanceBetween;
 
-    //[SerializeField] private CircleCollider2D circleCollider;
-
     private void Awake()
     {
-
         playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -66,14 +63,10 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(2);
     }
 
-
-    #endregion
-
-
-
     public void LootDrop()
     {
         var RandChance = Random.Range(0, 10);
         if (RandChance == 5) Instantiate(lootPrefab, transform.position, transform.rotation);
     }
+    #endregion
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class LifepointManager : MonoBehaviour
 {
-    //[SerializeField] private GameObject player;
 
     [SerializeField] private HealthWevent playerHealth; 
     
@@ -21,23 +20,16 @@ public class LifepointManager : MonoBehaviour
 
     private void SetLifepoints()
     {
-        for (int i = 0; i < hearts.Length; i++)
+        for (int num = 0; num < hearts.Length; num++) // for make heart image display display equal player's hp
         {
-            if (i < playerHealth.Hp)
-            {
-                hearts[i].sprite = fullHeart;
-            } else
-            {
-                hearts[i].sprite = emptyHeart;
-            }
+            if (num < playerHealth.Hp) hearts[num].sprite = fullHeart;
 
-            if (i < playerHealth.MaxHp)
-            {
-                hearts[i].enabled = true;
-            } else
-            {
-                hearts[i].enabled = false;
-            }
+            else hearts[num].sprite = emptyHeart;
+
+            if (num < playerHealth.MaxHp) hearts[num].enabled = true;
+
+            else hearts[num].enabled = false;
+
         }
     }
 
