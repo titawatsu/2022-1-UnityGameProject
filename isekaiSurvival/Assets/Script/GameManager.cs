@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
         GameOverUi.SetActive(true);
 
-        //AudioListener.pause = true;
     }
 
 }
