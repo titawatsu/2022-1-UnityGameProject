@@ -5,21 +5,18 @@ using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
-    [Header("TextmeshProText")] 
+    [Header("TextmeshProText")]
     public TMP_Text timerText;
 
     public float timer;
     private float initialTime;
-
-
-    private bool keeptimer = true;
 
     #region START_UPDATE
     private void Start() => GetStartTime();
 
     private void Update()
     {
-        if (keeptimer) UpdateTimer();
+        UpdateTimer();
     }
     #endregion
 
@@ -32,21 +29,14 @@ public class TimeManager : MonoBehaviour
 
     private void UpdateTimer()
     {
-        
+
         timer = Time.time - initialTime;
         timerText.text = TimeToString(timer);
     }
 
-    public float Stoptimer()
-    {
-        keeptimer = false;
-        Debug.Log("Timer stopped at " + TimeToString(Stoptimer()));
-        return timer; // return time
-    }
-
     public string TimeToString(float t) // update timer's text in-game
     {
-        
+
         string minutes = ((int)t / 60).ToString("00");
         string seconds = (t % 60).ToString("00");
         string miliseconds = ((int)(t * 100f) % 100).ToString("00");

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     #region START_UPDATE
     private void Start()
     {
-        
         SetGameResume();
     }
 
